@@ -3,7 +3,7 @@ const VoiceResponse = require('twilio').twiml.VoiceResponse;
 module.exports = (req, res) => {
   const twimlResponse = new VoiceResponse();
 
-  if (req.body.Digits) {
+  if (req.body?.Digits) {
     const digits = req.body.Digits;
     if (digits >= 1 && digits <= 160) {
       // Construct the audio file URL using the provided reference number.
@@ -18,10 +18,10 @@ module.exports = (req, res) => {
     // Initial prompt for the user.
     twimlResponse.gather({
       input: 'speech dtmf',
-      timeout: 5,
+      timeout: 6,
       numDigits: 3,
       action: '/api/main',
-    }).say('Welcome to Museum. Please enter an artifact reference number.');
+    }).say('Welcome to Museum. Please enter or say an artifact reference number.');
     twiml.redirect('/api/main');
   }
 
