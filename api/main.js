@@ -21,7 +21,7 @@ module.exports = (req, res) => {
       timeout: 6,
       numDigits: 3,
       action: '/api/main',
-    }).say('Welcome to Museum. Please enter or say an artifact reference number.');
+    }).say('Welcome to Museum. Please enter an artifact reference number.');
     twiml.redirect('/api/main');
   }
 
