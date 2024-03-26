@@ -9,6 +9,7 @@ module.exports = (req, res) => {
       // Construct the audio file URL using the provided reference number.
       const audioUrl = `https://audioguide.mmm.museum/2024/${digits}.mp3`;
       twimlResponse.play(audioUrl);
+      twimlResponse.redirect('/api/main');
     } else {
       // If the input is out of range, ask again.
       twimlResponse.say('Invalid input. Please enter a artifact reference number, between 1 and 160.');
