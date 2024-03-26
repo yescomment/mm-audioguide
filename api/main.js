@@ -11,8 +11,8 @@ module.exports = (req, res) => {
       twimlResponse.play(audioUrl);
     } else {
       // If the input is out of range, ask again.
-      twimlResponse.say('Invalid input. Please enter a number between 1 and 151.');
-      twimlResponse.redirect('/api/mmuseumm'); // Redirect to the same endpoint to try again.
+      twimlResponse.say('Invalid input. Please enter a artifact reference number, between 1 and 160.');
+      twimlResponse.redirect('/api/main'); // Redirect to the same endpoint to try again.
     }
   } else {
     // Initial prompt for the user.
@@ -20,8 +20,8 @@ module.exports = (req, res) => {
       input: 'speech dtmf',
       timeout: 10,
       numDigits: 3,
-      action: '/api/mmuseumm',
-    }).say('Welcome to Mmuseumm. Please enter an artifact reference number.');
+      action: '/api/main',
+    }).say('Welcome to Museum. Please enter an artifact reference number.');
   }
 
   res.setHeader('Content-Type', 'text/xml');
