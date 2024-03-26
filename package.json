@@ -1,0 +1,22 @@
+{
+  "name": "mm-audioguide",
+  "version": "1.0.0",
+  "description": "Audioguide for Mmuseumm, a modern unnatural history museum",
+  "main": "api/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yescomment/mm-audioguide.git"
+  },
+  "author": "Jacob Ford <j@cobford.com> (https://nocomment.llc/)",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/yescomment/mm-audioguide/issues"
+  },
+  "homepage": "https://github.com/yescomment/mm-audioguide#readme",
+  "dependencies": {
+    "twilio": "^5.0.1"
+  }
+}
