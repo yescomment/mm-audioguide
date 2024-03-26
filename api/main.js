@@ -22,7 +22,7 @@ module.exports = (req, res) => {
       numDigits: 3,
       action: '/api/main',
     }).say('Welcome to Museum. Please enter an artifact reference number.');
-    twiml.redirect('/api/main');
+    twimlResponse.redirect('/api/main');
   }
 
   res.setHeader('Content-Type', 'text/xml');
