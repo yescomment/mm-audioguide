@@ -5,7 +5,7 @@ module.exports = (req, res) => {
 
   if (req.body.Digits) {
     const digits = req.body.Digits;
-    if (digits >= 1 && digits <= 151) {
+    if (digits >= 1 && digits <= 160) {
       // Construct the audio file URL using the provided reference number.
       const audioUrl = `${req.headers['x-forwarded-proto']}://${req.headers.host}/audio/MM24-${digits}-*.mp3`;
       twimlResponse.play(audioUrl);
