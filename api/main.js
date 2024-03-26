@@ -1,7 +1,7 @@
 const VoiceResponse = require('twilio').twiml.VoiceResponse;
 
 module.exports = (req, res) => {
-  const twimlResponse = new VoiceReponse();
+  const twimlResponse = new VoiceResponse();
 
   if (req.body.Digits) {
     const digits = req.body.Digits;
