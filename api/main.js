@@ -18,7 +18,7 @@ module.exports = (req, res) => {
     // Initial prompt for the user.
     twimlResponse.gather({
       input: 'speech dtmf',
-      timeout: 3,
+      timeout: 5,
       numDigits: 3,
       action: '/api/main',
     }).say('Welcome to Museum. Please enter an artifact reference number.');
