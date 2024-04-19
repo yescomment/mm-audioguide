@@ -22,7 +22,7 @@ module.exports = (req, res) => {
       timeout: 2,
       numDigits: 3,
       action: '/api/main',
-    }).say('Welcome to Museum. Please enter an artifact reference number.');
+    }).play('https://audioguide.mmm.museum/prompts/welcome.mp3');
     twimlResponse.redirect('/api/main');
   }
 
