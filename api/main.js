@@ -12,7 +12,7 @@ module.exports = (req, res) => {
       twimlResponse.redirect('/api/main');
     } else {
       // If the input is out of range, ask again.
-      twimlResponse.say('Invalid input. Please enter a artifact reference number, between 1 and 160.');
+      twimlResponse.say('There is no audio for that reference number. Please try another.');
       twimlResponse.redirect('/api/main'); // Redirect to the same endpoint to try again.
     }
   } else {
