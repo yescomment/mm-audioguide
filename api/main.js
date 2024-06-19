@@ -8,12 +8,7 @@ module.exports = (req, res) => {
     if (digits >= 1 && digits <= 160) {
       // Construct the audio file URL using the provided reference number.
       const audioUrl = `https://audioguide.mmm.museum/2024/${digits}.mp3`;
-      try {
-        twimlResponse.play(audioUrl);
-      } catch (error) {
-        console.error(error);
-        twimlResponse.say('There is no audio for that reference number. Please try another.');
-      }
+      twimlResponse.play(audioUrl);
       twimlResponse.redirect('/api/main');
     } else {
       // If the input is out of range, ask again.
