@@ -7,7 +7,6 @@ if [[ ! -f extensionurls.txt ]]; then
 fi
 
 # Create a directory for the downloaded HTML files and MP3s
-mkdir -p extensions_html
 mkdir -p greetings_mp3
 
 # Step 1: Download HTML pages listed in extensionurls.txt
