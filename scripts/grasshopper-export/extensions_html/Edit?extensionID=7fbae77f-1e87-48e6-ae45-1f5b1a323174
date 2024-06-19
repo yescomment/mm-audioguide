@@ -1,0 +1,819 @@
+
+<div class="row expanded extensionDetail hidden slideDown">
+    <div>
+        <div class="ajaxUpdate ajaxUpdateDestinationNumberList row">
+
+
+
+<div class="row">
+    <h4>Where should we forward callers to?</h4>
+    <p class="infotext">Add and configure call forwarding numbers</p>
+</div>
+<ul class="row sortable">
+
+
+</ul>
+
+
+<div id="AddDestinationNumberCollapsed" class="row">
+<a class="action secondary overlayTrigger" href="/DestinationNumber/ForwardingConfig?extensionID=7fbae77f-1e87-48e6-ae45-1f5b1a323174" id="ForwardOptions" rel="#CallForwardingSelectionOverlay">Options</a>        <div id="CallForwardingSelectionOverlay" style="background-color: #FAFAFA" class="hidden modal largeOverlay">
+            <div class="ajaxUpdate"></div>
+        </div>
+    <a id="DestinationNumberFormExpander" class="action secondary right">Add a forwarding number</a>
+</div>
+
+<div id="AddDestinationNumberExpanded" class="row hidden ajaxUpdate">
+
+<div class="row">
+<form action="/DestinationNumber/Create" class="createDestinationNumber destination-numbers" method="post">        <div class="hidden">
+            <input data-val="true" data-val-required="The Extension I D field is required." id="ExtensionID" name="ExtensionID" type="hidden" value="7fbae77f-1e87-48e6-ae45-1f5b1a323174" />
+        </div>
+        <div class="row details destination-number-details">
+            <div class="section">
+                <h5>Add a call forwarding number</h5>
+            </div>
+            <div class="section">
+                <label for="PhoneData">Forwarding number</label>
+                <input data-val="true" data-val-required="The Forwarding number field is required." id="destinationPhoneNumberData" name="PhoneData" type="text" value="" />
+            </div>
+            <div id="forwardingOptionsMsg">
+                <img src="/Content/img/i.png"/>
+                <span>Inserting a pause only works with direct connect, so we&#39;ll switch to that setting when you save this change</span>
+            </div>
+            <div class="section">
+                <label>How should Grasshopper handle calls to this number?</label>
+                <div class="handling-options">
+                            <div class="row">
+                                <input id="CallHandlingType_0_7fbae77f1e8748e6ae451f5b1a323174" name="CallHandlingType" value="CallAnnounce" type="radio" >
+                                <label for="CallHandlingType_0_7fbae77f1e8748e6ae451f5b1a323174" class="callHandlingType">Calls will be announced when you pick up.</label>
+                            </div>
+                            <div class="row">
+                                <input id="CallHandlingType_0_7fbae77f1e8748e6ae451f5b1a323174" name="CallHandlingType" value="DirectConnect" type="radio"  checked=&quot;checked&quot;>
+                                <label for="CallHandlingType_0_7fbae77f1e8748e6ae451f5b1a323174" class="callHandlingType">Calls will connect to you as soon as you pick up.</label>
+                            </div>
+                            <div class="row">
+                                <input id="CallHandlingType_0_7fbae77f1e8748e6ae451f5b1a323174" name="CallHandlingType" value="CallScreening" type="radio" >
+                                <label for="CallHandlingType_0_7fbae77f1e8748e6ae451f5b1a323174" class="callHandlingType">Callers will be asked for their name, then announced to you.</label>
+                            </div>
+
+                </div>
+            </div>
+            <div class="section">
+                <label for="Description">Description (optional)</label>
+                <input id="Description" maxlength="50" name="Description" type="text" value="" />
+            </div>
+            <div class="section">
+                <label>When do you want this number to receive calls?</label>
+                <select data-val="true" data-val-required="The Schedule Type field is required." id="ScheduleType" link="/DestinationNumber/ScheduleChangeType" name="ScheduleType"><option selected="selected" value="AlwaysOpen">24/7</option>
+<option value="MondayToFriday9To5">M-F, 9-5</option>
+<option value="SaturdayToSunday9To5">Sat &amp; Sun, 9-5</option>
+<option value="CustomSchedule">Custom Schedule</option>
+</select>
+            </div>
+            <div class="section customScheduling">
+
+<div class="row section">
+    
+    <div class="row">
+        <table class="calendar">
+            <thead>
+                <tr>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td colspan="7" class="selection">
+                            <div class="slot big-slot">24/7 EST</div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+            </div>
+            <div class="section buttons">
+                <a id="DestinationNumberFormCollapser" class="action secondary">Cancel</a>
+                <a href="javascript:void(0);" class="action primary formSubmit">Add this number</a>
+            </div>
+        </div>
+</form></div>
+
+</div>
+<br style="clear:both;" />
+<br style="clear:both;" />
+<hr />
+
+<script type="text/javascript">
+    window.checkFancySwitchesState();
+</script>
+
+        </div>
+        <div class="ajaxUpdate row">
+
+<div class="row">
+<h4>Where do you want messages sent to?</h4>
+<p class="infotext">Messages will be sent as attachments</p>
+</div>
+<ul class="graylist nodrag row">
+</ul>
+
+<div class="row section AddNotificationCollapsed">
+<a class="action secondary overlayTrigger" href="/Notification/ForwardExtension?extensionID=7fbae77f-1e87-48e6-ae45-1f5b1a323174" rel="#FwdMessageToExtensionOverlay">Options</a>    <a class="action secondary right NotificationFormExpander">Add email address</a>
+</div>
+<div class="row section hidden AddNotificationExpanded">
+<form action="/Notification/Create" class="createNotification" method="post">    <div class="hidden"><input data-val="true" data-val-required="The Extension I D field is required." id="ExtensionID" name="ExtensionID" type="hidden" value="7fbae77f-1e87-48e6-ae45-1f5b1a323174" /></div>
+    <div class="row grayrow add-notification">
+        <div class="section">
+            <h5>Add a notification</h5>
+        </div>
+        <div class="section">
+            <label for="EmailAddress">Email Address</label>
+            <input data-val="true" data-val-required="The Email Address field is required." id="EmailAddress" name="EmailAddress" type="text" value="" />
+            <div class="right">
+                <a href="javascript:void(0);" class="action primary formSubmit">Add</a>
+                <a class="action secondary NotificationFormCollapser">Cancel</a>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+
+<div id="FwdMessageToExtensionOverlay" style="background-color: #FAFAFA" class="hidden modal forwardMessageOverlay">
+    <div class="ajaxUpdate"></div>
+</div>
+
+
+        </div>
+        <hr/>
+        <div class="row">
+
+<div class="row collapsed greetings-title">
+    <h4>Greetings</h4>
+    <span hidden id="greetingExtnid">7fbae77f-1e87-48e6-ae45-1f5b1a323174</span>
+    <a data-toggle=".otherGreetings" href="javascript:void(0);" class="toggleOtherGreetings action secondary" data-trigger-text="Hide other greetings">Show other greetings</a>
+    <br />
+</div>
+
+<div class="row section greeting-lib">
+    <h5>Voicemail Greeting</h5>
+    <p class="infotext">Gives callers a chance to leave you a message when you are unavailable.</p>
+
+    <div class="ajaxUpdate ajaxUpdateStandardLibrary">
+
+
+
+
+<div class="activegreeting clearfix label-row">
+    <p class="left">
+        7031 bodyb oso woman
+    </p>
+    <div class="right">
+        <a href="javascript:void(0);" class="action primary right greeting-lib-toggle">Change Greeting</a>
+            <a href="/File/DownloadGreeting?greetingID=c7751937-a5e6-4a5f-b871-550e4b93954c" class="ic_download"><img src="/Content/img/ic_download.png" /></a>
+
+
+<div class="jp-single-player">
+    <div class="jp-interface">
+        <ul class="jp-controls">
+            <li><a href="#" id="jplayer_play_Jplayercd91f872-2c1e-44bb-a275-d349e9979f3c" class="jp-play jp-control" tabindex="1"><span class="jp-playericon">Listen</span></a></li>
+            <li><a href="#" id="jplayer_pause_Jplayercd91f872-2c1e-44bb-a275-d349e9979f3c" class="jp-pause jp-control" tabindex="1"><span class="jp-playericon">Pause</span></a></li>
+            <li><a href="#" id="jplayer_volume_min_Jplayercd91f872-2c1e-44bb-a275-d349e9979f3c" class="jp-volume-min" tabindex="1">min volume</a></li>
+            <li><a href="#" id="jplayer_volume_max_Jplayercd91f872-2c1e-44bb-a275-d349e9979f3c" class="jp-volume-max" tabindex="1">max volume</a></li>
+        </ul>
+        <div id="jplayer_volume_bar_Jplayercd91f872-2c1e-44bb-a275-d349e9979f3c" class="jp-volume-bar"><div id="jplayer_volume_bar_value_Jplayercd91f872-2c1e-44bb-a275-d349e9979f3c" class="jp-volume-bar-value"></div></div>
+        <div id="jplayer_play_time_Jplayercd91f872-2c1e-44bb-a275-d349e9979f3c" class="jp-play-time"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.registerAudioPlayer('/File/PlayGreeting?greetingID=c7751937-a5e6-4a5f-b871-550e4b93954c', 'cd91f872-2c1e-44bb-a275-d349e9979f3c');
+</script>    </div>
+</div>
+<div class="row section hidden greeting-lib-items">
+        <div class="row section activegreeting">
+            <div class="row section clearfix">
+                <span>System Default</span>
+                <div class="right library-buttons">
+<form action="/Greetings/Activate" method="post"><input id="ExtensionID" name="ExtensionID" type="hidden" value="7fbae77f-1e87-48e6-ae45-1f5b1a323174" /><input id="GreetingType" name="GreetingType" type="hidden" value="Standard" /><input id="Name" name="Name" type="hidden" value="System Default" />                        <a class="action primary right formSubmit use-button" href="javascript:void(0);">Use</a>
+</form>                    
+
+<div class="jp-single-player">
+    <div class="jp-interface">
+        <ul class="jp-controls">
+            <li><a href="#" id="jplayer_play_Jplayer73fb2d22-faba-4d8a-b724-74accd685ce3" class="jp-play jp-control" tabindex="1"><span class="jp-playericon">Listen</span></a></li>
+            <li><a href="#" id="jplayer_pause_Jplayer73fb2d22-faba-4d8a-b724-74accd685ce3" class="jp-pause jp-control" tabindex="1"><span class="jp-playericon">Pause</span></a></li>
+            <li><a href="#" id="jplayer_volume_min_Jplayer73fb2d22-faba-4d8a-b724-74accd685ce3" class="jp-volume-min" tabindex="1">min volume</a></li>
+            <li><a href="#" id="jplayer_volume_max_Jplayer73fb2d22-faba-4d8a-b724-74accd685ce3" class="jp-volume-max" tabindex="1">max volume</a></li>
+        </ul>
+        <div id="jplayer_volume_bar_Jplayer73fb2d22-faba-4d8a-b724-74accd685ce3" class="jp-volume-bar"><div id="jplayer_volume_bar_value_Jplayer73fb2d22-faba-4d8a-b724-74accd685ce3" class="jp-volume-bar-value"></div></div>
+        <div id="jplayer_play_time_Jplayer73fb2d22-faba-4d8a-b724-74accd685ce3" class="jp-play-time"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.registerAudioPlayer('/File/PlayDefaultVoiceMail', '73fb2d22-faba-4d8a-b724-74accd685ce3');
+</script>
+                </div>
+            </div>
+        </div>
+
+        <div class="row section activegreeting">
+            <div class="row section clearfix">
+                <span class="left item-name">fake id first id</span>
+                <div class="right library-buttons">
+<form action="/Greetings/Activate" method="post">                        <div class="hidden">
+                            <input id="ExtensionID" name="ExtensionID" type="hidden" value="7fbae77f-1e87-48e6-ae45-1f5b1a323174" />
+                            <input id="GreetingID" name="GreetingID" type="hidden" value="2b3ab5f8-f137-4e9c-afc1-6aa18896163d" />
+                            <input id="GreetingType" name="GreetingType" type="hidden" value="Standard" />
+                            <input id="Name" name="Name" type="hidden" value="fake id first id" />
+                        </div>
+                        <div>
+                            <a class="action primary right formSubmit use-button" href="javascript:void(0);">Use</a>
+                        </div>
+</form>                    
+
+<div class="jp-single-player">
+    <div class="jp-interface">
+        <ul class="jp-controls">
+            <li><a href="#" id="jplayer_play_Jplayer7c545e7d-777d-4ca3-bf51-8f82f78f2f5b" class="jp-play jp-control" tabindex="1"><span class="jp-playericon">Listen</span></a></li>
+            <li><a href="#" id="jplayer_pause_Jplayer7c545e7d-777d-4ca3-bf51-8f82f78f2f5b" class="jp-pause jp-control" tabindex="1"><span class="jp-playericon">Pause</span></a></li>
+            <li><a href="#" id="jplayer_volume_min_Jplayer7c545e7d-777d-4ca3-bf51-8f82f78f2f5b" class="jp-volume-min" tabindex="1">min volume</a></li>
+            <li><a href="#" id="jplayer_volume_max_Jplayer7c545e7d-777d-4ca3-bf51-8f82f78f2f5b" class="jp-volume-max" tabindex="1">max volume</a></li>
+        </ul>
+        <div id="jplayer_volume_bar_Jplayer7c545e7d-777d-4ca3-bf51-8f82f78f2f5b" class="jp-volume-bar"><div id="jplayer_volume_bar_value_Jplayer7c545e7d-777d-4ca3-bf51-8f82f78f2f5b" class="jp-volume-bar-value"></div></div>
+        <div id="jplayer_play_time_Jplayer7c545e7d-777d-4ca3-bf51-8f82f78f2f5b" class="jp-play-time"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.registerAudioPlayer('/File/PlayGreeting?greetingID=2b3ab5f8-f137-4e9c-afc1-6aa18896163d', '7c545e7d-777d-4ca3-bf51-8f82f78f2f5b');
+</script>
+                    <a href="/File/DownloadGreeting?greetingID=2b3ab5f8-f137-4e9c-afc1-6aa18896163d" class="ic_download"><img src="/Content/img/ic_download.png" /></a>
+                    <a class="action overlayTrigger delete-confirm" href="/Greetings/DeleteConfirmation?extensionID=7fbae77f-1e87-48e6-ae45-1f5b1a323174&amp;greetingID=2b3ab5f8-f137-4e9c-afc1-6aa18896163d&amp;greetingType=Standard&amp;extensionType=Employee&amp;greetingName=fake%20id%20first%20id" rel="#OverlayDeleteConfirmation">Delete</a>
+                </div>
+            </div>
+        </div>
+        <div class="row section activegreeting">
+            <div class="row section clearfix">
+                <span class="left item-name">7031</span>
+                <div class="right library-buttons">
+<form action="/Greetings/Activate" method="post">                        <div class="hidden">
+                            <input id="ExtensionID" name="ExtensionID" type="hidden" value="7fbae77f-1e87-48e6-ae45-1f5b1a323174" />
+                            <input id="GreetingID" name="GreetingID" type="hidden" value="c8673323-1664-453b-a992-4a2004d9e393" />
+                            <input id="GreetingType" name="GreetingType" type="hidden" value="Standard" />
+                            <input id="Name" name="Name" type="hidden" value="7031" />
+                        </div>
+                        <div>
+                            <a class="action primary right formSubmit use-button" href="javascript:void(0);">Use</a>
+                        </div>
+</form>                    
+
+<div class="jp-single-player">
+    <div class="jp-interface">
+        <ul class="jp-controls">
+            <li><a href="#" id="jplayer_play_Jplayer6e84d1ba-37cf-4741-99d2-717e45f68d62" class="jp-play jp-control" tabindex="1"><span class="jp-playericon">Listen</span></a></li>
+            <li><a href="#" id="jplayer_pause_Jplayer6e84d1ba-37cf-4741-99d2-717e45f68d62" class="jp-pause jp-control" tabindex="1"><span class="jp-playericon">Pause</span></a></li>
+            <li><a href="#" id="jplayer_volume_min_Jplayer6e84d1ba-37cf-4741-99d2-717e45f68d62" class="jp-volume-min" tabindex="1">min volume</a></li>
+            <li><a href="#" id="jplayer_volume_max_Jplayer6e84d1ba-37cf-4741-99d2-717e45f68d62" class="jp-volume-max" tabindex="1">max volume</a></li>
+        </ul>
+        <div id="jplayer_volume_bar_Jplayer6e84d1ba-37cf-4741-99d2-717e45f68d62" class="jp-volume-bar"><div id="jplayer_volume_bar_value_Jplayer6e84d1ba-37cf-4741-99d2-717e45f68d62" class="jp-volume-bar-value"></div></div>
+        <div id="jplayer_play_time_Jplayer6e84d1ba-37cf-4741-99d2-717e45f68d62" class="jp-play-time"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.registerAudioPlayer('/File/PlayGreeting?greetingID=c8673323-1664-453b-a992-4a2004d9e393', '6e84d1ba-37cf-4741-99d2-717e45f68d62');
+</script>
+                    <a href="/File/DownloadGreeting?greetingID=c8673323-1664-453b-a992-4a2004d9e393" class="ic_download"><img src="/Content/img/ic_download.png" /></a>
+                    <a class="action overlayTrigger delete-confirm" href="/Greetings/DeleteConfirmation?extensionID=7fbae77f-1e87-48e6-ae45-1f5b1a323174&amp;greetingID=c8673323-1664-453b-a992-4a2004d9e393&amp;greetingType=Standard&amp;extensionType=Employee&amp;greetingName=7031" rel="#OverlayDeleteConfirmation">Delete</a>
+                </div>
+            </div>
+        </div>
+        <div class="row section activegreeting">
+            <div class="row section clearfix">
+                <span class="left item-name">bone saw</span>
+                <div class="right library-buttons">
+<form action="/Greetings/Activate" method="post">                        <div class="hidden">
+                            <input id="ExtensionID" name="ExtensionID" type="hidden" value="7fbae77f-1e87-48e6-ae45-1f5b1a323174" />
+                            <input id="GreetingID" name="GreetingID" type="hidden" value="eb1a0159-9cf8-4e89-9fe3-538b9c783bd2" />
+                            <input id="GreetingType" name="GreetingType" type="hidden" value="Standard" />
+                            <input id="Name" name="Name" type="hidden" value="bone saw" />
+                        </div>
+                        <div>
+                            <a class="action primary right formSubmit use-button" href="javascript:void(0);">Use</a>
+                        </div>
+</form>                    
+
+<div class="jp-single-player">
+    <div class="jp-interface">
+        <ul class="jp-controls">
+            <li><a href="#" id="jplayer_play_Jplayera9ab7467-4ec8-42ed-a6ad-5856203d491c" class="jp-play jp-control" tabindex="1"><span class="jp-playericon">Listen</span></a></li>
+            <li><a href="#" id="jplayer_pause_Jplayera9ab7467-4ec8-42ed-a6ad-5856203d491c" class="jp-pause jp-control" tabindex="1"><span class="jp-playericon">Pause</span></a></li>
+            <li><a href="#" id="jplayer_volume_min_Jplayera9ab7467-4ec8-42ed-a6ad-5856203d491c" class="jp-volume-min" tabindex="1">min volume</a></li>
+            <li><a href="#" id="jplayer_volume_max_Jplayera9ab7467-4ec8-42ed-a6ad-5856203d491c" class="jp-volume-max" tabindex="1">max volume</a></li>
+        </ul>
+        <div id="jplayer_volume_bar_Jplayera9ab7467-4ec8-42ed-a6ad-5856203d491c" class="jp-volume-bar"><div id="jplayer_volume_bar_value_Jplayera9ab7467-4ec8-42ed-a6ad-5856203d491c" class="jp-volume-bar-value"></div></div>
+        <div id="jplayer_play_time_Jplayera9ab7467-4ec8-42ed-a6ad-5856203d491c" class="jp-play-time"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.registerAudioPlayer('/File/PlayGreeting?greetingID=eb1a0159-9cf8-4e89-9fe3-538b9c783bd2', 'a9ab7467-4ec8-42ed-a6ad-5856203d491c');
+</script>
+                    <a href="/File/DownloadGreeting?greetingID=eb1a0159-9cf8-4e89-9fe3-538b9c783bd2" class="ic_download"><img src="/Content/img/ic_download.png" /></a>
+                    <a class="action overlayTrigger delete-confirm" href="/Greetings/DeleteConfirmation?extensionID=7fbae77f-1e87-48e6-ae45-1f5b1a323174&amp;greetingID=eb1a0159-9cf8-4e89-9fe3-538b9c783bd2&amp;greetingType=Standard&amp;extensionType=Employee&amp;greetingName=bone%20saw" rel="#OverlayDeleteConfirmation">Delete</a>
+                </div>
+            </div>
+        </div>
+        <div class="row section activegreeting">
+            <div class="row section clearfix">
+                <span class="left item-name">vomit basg</span>
+                <div class="right library-buttons">
+<form action="/Greetings/Activate" method="post">                        <div class="hidden">
+                            <input id="ExtensionID" name="ExtensionID" type="hidden" value="7fbae77f-1e87-48e6-ae45-1f5b1a323174" />
+                            <input id="GreetingID" name="GreetingID" type="hidden" value="a371d122-af58-4e90-8e56-9b7befdc40f2" />
+                            <input id="GreetingType" name="GreetingType" type="hidden" value="Standard" />
+                            <input id="Name" name="Name" type="hidden" value="vomit basg" />
+                        </div>
+                        <div>
+                            <a class="action primary right formSubmit use-button" href="javascript:void(0);">Use</a>
+                        </div>
+</form>                    
+
+<div class="jp-single-player">
+    <div class="jp-interface">
+        <ul class="jp-controls">
+            <li><a href="#" id="jplayer_play_Jplayer39ab3c51-baf4-434c-a198-57a8719ec38a" class="jp-play jp-control" tabindex="1"><span class="jp-playericon">Listen</span></a></li>
+            <li><a href="#" id="jplayer_pause_Jplayer39ab3c51-baf4-434c-a198-57a8719ec38a" class="jp-pause jp-control" tabindex="1"><span class="jp-playericon">Pause</span></a></li>
+            <li><a href="#" id="jplayer_volume_min_Jplayer39ab3c51-baf4-434c-a198-57a8719ec38a" class="jp-volume-min" tabindex="1">min volume</a></li>
+            <li><a href="#" id="jplayer_volume_max_Jplayer39ab3c51-baf4-434c-a198-57a8719ec38a" class="jp-volume-max" tabindex="1">max volume</a></li>
+        </ul>
+        <div id="jplayer_volume_bar_Jplayer39ab3c51-baf4-434c-a198-57a8719ec38a" class="jp-volume-bar"><div id="jplayer_volume_bar_value_Jplayer39ab3c51-baf4-434c-a198-57a8719ec38a" class="jp-volume-bar-value"></div></div>
+        <div id="jplayer_play_time_Jplayer39ab3c51-baf4-434c-a198-57a8719ec38a" class="jp-play-time"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.registerAudioPlayer('/File/PlayGreeting?greetingID=a371d122-af58-4e90-8e56-9b7befdc40f2', '39ab3c51-baf4-434c-a198-57a8719ec38a');
+</script>
+                    <a href="/File/DownloadGreeting?greetingID=a371d122-af58-4e90-8e56-9b7befdc40f2" class="ic_download"><img src="/Content/img/ic_download.png" /></a>
+                    <a class="action overlayTrigger delete-confirm" href="/Greetings/DeleteConfirmation?extensionID=7fbae77f-1e87-48e6-ae45-1f5b1a323174&amp;greetingID=a371d122-af58-4e90-8e56-9b7befdc40f2&amp;greetingType=Standard&amp;extensionType=Employee&amp;greetingName=vomit%20basg" rel="#OverlayDeleteConfirmation">Delete</a>
+                </div>
+            </div>
+        </div>
+
+
+    <div class="row section">
+        <a class="action primary right overlayTrigger" href="/Greetings/Create?extensionID=7fbae77f-1e87-48e6-ae45-1f5b1a323174&amp;greetingType=Standard&amp;extensionType=Employee" id="CreateNewStandard7fbae77f-1e87-48e6-ae45-1f5b1a323174Greeting" rel="#RecordingSelectionOverlay_Standard7fbae77f-1e87-48e6-ae45-1f5b1a323174">Create new greeting</a>
+        <div id="RecordingSelectionOverlay_Standard7fbae77f-1e87-48e6-ae45-1f5b1a323174" style="background-color:#FAFAFA" class="hidden modal mediumOverlay recordingSelectionOverlay">
+            <div class="ajaxUpdate"></div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    pendo.identify({
+        visitor: {
+            gh_customized_main_greeting: 'True',
+            gh_customized_away_greeting: 'False',
+            gh_customised_voicemail_greeting: 'True'
+    }
+});
+</script>
+    </div>
+</div>
+
+<div class="otherGreetings hidden">
+    <div class="row section greeting-lib">
+        <h5>Call Forwarding Greeting</h5>
+        <p class="infotext">Plays right before the call is connected.</p>
+        <div class="row ajaxUpdate ajaxUpdateTransferLibrary">
+
+
+
+
+<div class="activegreeting clearfix label-row">
+    <p class="left">
+        System Default
+    </p>
+    <div class="right">
+        <a href="javascript:void(0);" class="action primary right greeting-lib-toggle">Change Greeting</a>
+
+
+<div class="jp-single-player">
+    <div class="jp-interface">
+        <ul class="jp-controls">
+            <li><a href="#" id="jplayer_play_Jplayerfefffd87-e331-46d0-ad4c-444354c6896b" class="jp-play jp-control" tabindex="1"><span class="jp-playericon">Listen</span></a></li>
+            <li><a href="#" id="jplayer_pause_Jplayerfefffd87-e331-46d0-ad4c-444354c6896b" class="jp-pause jp-control" tabindex="1"><span class="jp-playericon">Pause</span></a></li>
+            <li><a href="#" id="jplayer_volume_min_Jplayerfefffd87-e331-46d0-ad4c-444354c6896b" class="jp-volume-min" tabindex="1">min volume</a></li>
+            <li><a href="#" id="jplayer_volume_max_Jplayerfefffd87-e331-46d0-ad4c-444354c6896b" class="jp-volume-max" tabindex="1">max volume</a></li>
+        </ul>
+        <div id="jplayer_volume_bar_Jplayerfefffd87-e331-46d0-ad4c-444354c6896b" class="jp-volume-bar"><div id="jplayer_volume_bar_value_Jplayerfefffd87-e331-46d0-ad4c-444354c6896b" class="jp-volume-bar-value"></div></div>
+        <div id="jplayer_play_time_Jplayerfefffd87-e331-46d0-ad4c-444354c6896b" class="jp-play-time"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.registerAudioPlayer('/File/PlayDefaultVoiceMail', 'fefffd87-e331-46d0-ad4c-444354c6896b');
+</script>    </div>
+</div>
+<div class="row section hidden greeting-lib-items">
+
+
+
+    <div class="row section">
+        <a class="action primary right overlayTrigger" href="/Greetings/Create?extensionID=7fbae77f-1e87-48e6-ae45-1f5b1a323174&amp;greetingType=Transfer&amp;extensionType=Employee" id="CreateNewTransfer7fbae77f-1e87-48e6-ae45-1f5b1a323174Greeting" rel="#RecordingSelectionOverlay_Transfer7fbae77f-1e87-48e6-ae45-1f5b1a323174">Create new greeting</a>
+        <div id="RecordingSelectionOverlay_Transfer7fbae77f-1e87-48e6-ae45-1f5b1a323174" style="background-color:#FAFAFA" class="hidden modal mediumOverlay recordingSelectionOverlay">
+            <div class="ajaxUpdate"></div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    pendo.identify({
+        visitor: {
+            gh_customized_main_greeting: 'False',
+            gh_customized_away_greeting: 'False',
+            gh_customised_voicemail_greeting: 'False'
+    }
+});
+</script>
+        </div>
+    </div>
+
+    <div class="row section greeting-lib">
+        <h5>Recorded Extension Name</h5>
+        <p class="infotext">Record your extension name, to know which extension an inbound call is for.</p>
+        <div class="row ajaxUpdate ajaxUpdateExtensionNameLibrary">
+
+
+
+
+<div class="activegreeting clearfix label-row">
+    <p class="left">
+        System Default
+    </p>
+    <div class="right">
+        <a href="javascript:void(0);" class="action primary right greeting-lib-toggle">Change Greeting</a>
+
+
+<div class="jp-single-player">
+    <div class="jp-interface">
+        <ul class="jp-controls">
+            <li><a href="#" id="jplayer_play_Jplayerf68c54bc-8efa-45e9-a2da-b5616dd7a5b2" class="jp-play jp-control" tabindex="1"><span class="jp-playericon">Listen</span></a></li>
+            <li><a href="#" id="jplayer_pause_Jplayerf68c54bc-8efa-45e9-a2da-b5616dd7a5b2" class="jp-pause jp-control" tabindex="1"><span class="jp-playericon">Pause</span></a></li>
+            <li><a href="#" id="jplayer_volume_min_Jplayerf68c54bc-8efa-45e9-a2da-b5616dd7a5b2" class="jp-volume-min" tabindex="1">min volume</a></li>
+            <li><a href="#" id="jplayer_volume_max_Jplayerf68c54bc-8efa-45e9-a2da-b5616dd7a5b2" class="jp-volume-max" tabindex="1">max volume</a></li>
+        </ul>
+        <div id="jplayer_volume_bar_Jplayerf68c54bc-8efa-45e9-a2da-b5616dd7a5b2" class="jp-volume-bar"><div id="jplayer_volume_bar_value_Jplayerf68c54bc-8efa-45e9-a2da-b5616dd7a5b2" class="jp-volume-bar-value"></div></div>
+        <div id="jplayer_play_time_Jplayerf68c54bc-8efa-45e9-a2da-b5616dd7a5b2" class="jp-play-time"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.registerAudioPlayer('/File/PlayDefaultVoiceMail', 'f68c54bc-8efa-45e9-a2da-b5616dd7a5b2');
+</script>    </div>
+</div>
+<div class="row section hidden greeting-lib-items">
+
+
+
+    <div class="row section">
+        <a class="action primary right overlayTrigger" href="/Greetings/Create?extensionID=7fbae77f-1e87-48e6-ae45-1f5b1a323174&amp;greetingType=ExtensionName&amp;extensionType=Employee" id="CreateNewExtensionName7fbae77f-1e87-48e6-ae45-1f5b1a323174Greeting" rel="#RecordingSelectionOverlay_ExtensionName7fbae77f-1e87-48e6-ae45-1f5b1a323174">Create new greeting</a>
+        <div id="RecordingSelectionOverlay_ExtensionName7fbae77f-1e87-48e6-ae45-1f5b1a323174" style="background-color:#FAFAFA" class="hidden modal mediumOverlay recordingSelectionOverlay">
+            <div class="ajaxUpdate"></div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    pendo.identify({
+        visitor: {
+            gh_customized_main_greeting: 'False',
+            gh_customized_away_greeting: 'False',
+            gh_customised_voicemail_greeting: 'False'
+    }
+});
+</script>
+        </div>
+    </div>
+
+    <div class="section greeting-lib">
+        <h5>Away Greeting</h5>
+        <p class="infotext">The away greeting will play when we are closed or on vacation</p>
+        <div class="awayGreetinContent opener closed">                        
+            <div class="row section expanded">
+                <div class="away-greeting-lib ajaxUpdate ajaxUpdateAwayLibrary">
+
+<div class="row collapsed activegreeting greeting-header">
+    <div class="row top">
+        <div class="left">
+            <h5 class="greetingsHeader">Away Greeting</h5>
+            <p class="greetingInfoText infotext">Can be used for vacations or when closed. Callers can leave a message for away greetings.</p>
+            <p>
+                System Default (<span>1</span> available)
+            </p>
+        </div>
+        <div class="right">
+                            <span hidden class="greetingExtnid">7fbae77f-1e87-48e6-ae45-1f5b1a323174</span>
+                <a id="cg_7fbae77f-1e87-48e6-ae45-1f5b1a323174" href="javascript:void(0);" class="expander-trigger state-default action primary right">Change Greeting</a>
+                <a id="cgc_7fbae77f-1e87-48e6-ae45-1f5b1a323174" href="javascript:void(0);" class="expander-trigger state-opened action secondary right hidden">Cancel</a>
+
+
+
+<div class="jp-single-player">
+    <div class="jp-interface">
+        <ul class="jp-controls">
+            <li><a href="#" id="jplayer_play_Jplayer8448da31-cabd-4161-ab2d-ad0df86a1219" class="jp-play jp-control" tabindex="1"><span class="jp-playericon">Listen</span></a></li>
+            <li><a href="#" id="jplayer_pause_Jplayer8448da31-cabd-4161-ab2d-ad0df86a1219" class="jp-pause jp-control" tabindex="1"><span class="jp-playericon">Pause</span></a></li>
+            <li><a href="#" id="jplayer_volume_min_Jplayer8448da31-cabd-4161-ab2d-ad0df86a1219" class="jp-volume-min" tabindex="1">min volume</a></li>
+            <li><a href="#" id="jplayer_volume_max_Jplayer8448da31-cabd-4161-ab2d-ad0df86a1219" class="jp-volume-max" tabindex="1">max volume</a></li>
+        </ul>
+        <div id="jplayer_volume_bar_Jplayer8448da31-cabd-4161-ab2d-ad0df86a1219" class="jp-volume-bar"><div id="jplayer_volume_bar_value_Jplayer8448da31-cabd-4161-ab2d-ad0df86a1219" class="jp-volume-bar-value"></div></div>
+        <div id="jplayer_play_time_Jplayer8448da31-cabd-4161-ab2d-ad0df86a1219" class="jp-play-time"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.registerAudioPlayer('/File/PlayDefaultVoiceMail', '8448da31-cabd-4161-ab2d-ad0df86a1219');
+</script>        </div>
+    </div>
+</div>
+<div id ="cg_expander_7fbae77f-1e87-48e6-ae45-1f5b1a323174" class="opener-expander">
+    <div class="row expanded">
+        
+
+
+        <div class="row section">
+            <a class="action primary right overlayTrigger" href="/Greetings/Create?extensionID=7fbae77f-1e87-48e6-ae45-1f5b1a323174&amp;greetingType=Away&amp;extensionType=Employee" rel="#AwayGreetingOverlay">Create new away greeting</a>
+
+            <div id="AwayGreetingOverlay" style="background-color: #FAFAFA" class="hidden modal mediumOverlay recordingSelectionOverlay">
+                <div class="ajaxUpdate"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+                </div>
+                <hr />
+                <div class="away-greeting-options ajaxUpdate">
+
+<div class="section">
+    <h5>Options</h5>
+</div>
+<div class="row section">
+    <span class="left option-title">The away greeting will</span>
+<form action="/AwayGreeting/ScheduleMode" class="htmlForm" method="post"><input data-val="true" data-val-required="The Greeting Schedule I D field is required." id="GreetingScheduleID" name="GreetingScheduleID" type="hidden" value="f05b979c-bcd3-4ec4-a0f9-24cf5bb93296" /><input data-val="true" data-val-required="The Extension I D field is required." id="ExtensionID" name="ExtensionID" type="hidden" value="7fbae77f-1e87-48e6-ae45-1f5b1a323174" /><input data-val="true" data-val-required="The Schedule Type field is required." id="ScheduleType" name="ScheduleType" type="hidden" value="AlwaysOpen" /><input id="ExtensionTimeZoneName" name="ExtensionTimeZoneName" type="hidden" value="Eastern Standard Time" /><select class="change-schedule left" data-val="true" data-val-required="The Active Schedule Mode field is required." id="ActiveScheduleMode" name="ActiveScheduleMode"><option selected="selected" value="NeverPlay">Never play</option>
+<option value="AlwaysPlay">Play all the time</option>
+<option value="UseScheduleAndVacation">Play when we are closed or on vacation</option>
+</select></form>
+        <div class="clearfix save-reset">
+<form action="/AwayGreeting/Reset" method="post"><input data-val="true" data-val-required="The Extension I D field is required." id="ExtensionID" name="ExtensionID" type="hidden" value="7fbae77f-1e87-48e6-ae45-1f5b1a323174" />                <a class="action secondary formSubmit">Cancel</a>
+</form>
+<form action="/AwayGreeting/Save" method="post"><input data-val="true" data-val-required="The Greeting Schedule I D field is required." id="GreetingScheduleID" name="GreetingScheduleID" type="hidden" value="f05b979c-bcd3-4ec4-a0f9-24cf5bb93296" /><input data-val="true" data-val-required="The Extension I D field is required." id="ExtensionID" name="ExtensionID" type="hidden" value="7fbae77f-1e87-48e6-ae45-1f5b1a323174" /><input data-val="true" data-val-required="The Active Schedule Mode field is required." id="ActiveScheduleMode" name="ActiveScheduleMode" type="hidden" value="NeverPlay" /><input data-val="true" data-val-required="The Schedule Type field is required." id="ScheduleType" name="ScheduleType" type="hidden" value="AlwaysOpen" /><input id="ExtensionTimeZoneName" name="ExtensionTimeZoneName" type="hidden" value="Eastern Standard Time" />                <a class="action primary formSubmit">Save Options</a>
+</form>        </div>
+</div>
+
+<script type="text/javascript">
+    window.AwayGreetingOptions = {
+        saveAction: "/AwayGreeting/Save",
+        resetAction: "/AwayGreeting/Reset",
+        addAction: "/AwayGreeting/AddTimeSlot"
+    };
+
+    $(function() {
+        var done = false;;
+        if (done) {
+            $("#exposeMask").hide();
+        }
+    });
+</script>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="ajaxUpdate vacation-schedule">
+<div class="row">
+    <div class="clearfix">
+        <div class="left">
+            <h5>Vacation Schedule</h5>
+            <p class="infotext">
+                Vacation not scheduled
+            </p>
+        </div>
+        <div class="right">
+<form action="/VacationDays/RemoveVacation" method="post"><input data-val="true" data-val-required="The Extension Id field is required." id="ExtensionId" name="ExtensionId" type="hidden" value="7fbae77f-1e87-48e6-ae45-1f5b1a323174" /><input data-val="true" data-val-required="The Active Schedule Mode field is required." id="ActiveScheduleMode" name="ActiveScheduleMode" type="hidden" value="NeverPlay" />                    <a id ="tvg_7fbae77f-1e87-48e6-ae45-1f5b1a323174" href="javascript:void(0)" class="action primary toggleVacationGreeting">Add Vacation</a>
+</form>        </div>
+    </div>
+</div>
+<div class="hidden" id="vacationDaysExpanded_7fbae77f-1e87-48e6-ae45-1f5b1a323174">
+    <div class="row section activegreeting">
+<form action="/VacationDays/SetVacationSchedule" method="post"><input data-val="true" data-val-required="The Extension Id field is required." id="ExtensionId" name="ExtensionId" type="hidden" value="7fbae77f-1e87-48e6-ae45-1f5b1a323174" /><input data-val="true" data-val-required="The Active Schedule Mode field is required." id="ActiveScheduleMode" name="ActiveScheduleMode" type="hidden" value="NeverPlay" /><input id="VacationScheduleID" name="VacationScheduleID" type="hidden" value="" />            <div class="row section">
+                <div class="left">
+                    <h5 class="OnVacationLabel">On vacation...</h5>
+                </div>
+                <span class="right">
+                    <a id ="vdeCancel_7fbae77f-1e87-48e6-ae45-1f5b1a323174" class="action secondary cancelVacationGreeting" href="javascript:void(0);">Cancel</a>
+                    <a class="action primary formSubmit" href="javascript:void(0);">Save</a>
+                </span>
+            </div>
+            <div class="vacation-dates">
+                <div class="row section">
+                    <label>From</label>
+                    <span class="data-input">
+                        <input class="dp" id="vacationFrom_7fbae77f-1e87-48e6-ae45-1f5b1a323174" name="StartDate.DateString" type="text" value="" />
+                        <label for="vacationFrom" style="display:inline;"><i class="icon-calendar"></i></label>
+                    </span>
+                    <select id="StartDate_Hours" name="StartDate.Hours"><option>01</option>
+<option>02</option>
+<option>03</option>
+<option>04</option>
+<option>05</option>
+<option>06</option>
+<option>07</option>
+<option>08</option>
+<option>09</option>
+<option>10</option>
+<option>11</option>
+<option selected="selected">12</option>
+</select>
+                    <select id="StartDate_Minutes" name="StartDate.Minutes"><option>00</option>
+<option>01</option>
+<option>02</option>
+<option>03</option>
+<option>04</option>
+<option>05</option>
+<option>06</option>
+<option>07</option>
+<option>08</option>
+<option>09</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+<option>13</option>
+<option>14</option>
+<option>15</option>
+<option>16</option>
+<option>17</option>
+<option>18</option>
+<option>19</option>
+<option>20</option>
+<option>21</option>
+<option>22</option>
+<option>23</option>
+<option>24</option>
+<option>25</option>
+<option>26</option>
+<option>27</option>
+<option>28</option>
+<option>29</option>
+<option>30</option>
+<option>31</option>
+<option>32</option>
+<option>33</option>
+<option>34</option>
+<option>35</option>
+<option>36</option>
+<option>37</option>
+<option>38</option>
+<option>39</option>
+<option>40</option>
+<option>41</option>
+<option>42</option>
+<option>43</option>
+<option>44</option>
+<option>45</option>
+<option>46</option>
+<option>47</option>
+<option>48</option>
+<option>49</option>
+<option>50</option>
+<option>51</option>
+<option>52</option>
+<option>53</option>
+<option>54</option>
+<option>55</option>
+<option>56</option>
+<option>57</option>
+<option>58</option>
+<option>59</option>
+</select>
+                    <select id="StartDate_AmPm" name="StartDate.AmPm"><option>AM</option>
+<option>PM</option>
+</select>
+                    <span>(Eastern Standard Time)</span>
+                    <br />
+                </div>
+                <div class="row section">
+                    <label>To</label>
+                    <span class="data-input">
+                        <input class="dp" id="vacationTo_7fbae77f-1e87-48e6-ae45-1f5b1a323174" name="EndDate.DateString" type="text" value="" />
+                        <label for="vacationTo" style="display:inline;"><i class="icon-calendar"></i></label>
+                    </span>
+                    <select id="EndDate_Hours" name="EndDate.Hours"><option>01</option>
+<option>02</option>
+<option>03</option>
+<option>04</option>
+<option>05</option>
+<option>06</option>
+<option>07</option>
+<option>08</option>
+<option>09</option>
+<option>10</option>
+<option>11</option>
+<option selected="selected">12</option>
+</select>
+                    <select id="EndDate_Minutes" name="EndDate.Minutes"><option>00</option>
+<option>01</option>
+<option>02</option>
+<option>03</option>
+<option>04</option>
+<option>05</option>
+<option>06</option>
+<option>07</option>
+<option>08</option>
+<option>09</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+<option>13</option>
+<option>14</option>
+<option>15</option>
+<option>16</option>
+<option>17</option>
+<option>18</option>
+<option>19</option>
+<option>20</option>
+<option>21</option>
+<option>22</option>
+<option>23</option>
+<option>24</option>
+<option>25</option>
+<option>26</option>
+<option>27</option>
+<option>28</option>
+<option>29</option>
+<option>30</option>
+<option>31</option>
+<option>32</option>
+<option>33</option>
+<option>34</option>
+<option>35</option>
+<option>36</option>
+<option>37</option>
+<option>38</option>
+<option>39</option>
+<option>40</option>
+<option>41</option>
+<option>42</option>
+<option>43</option>
+<option>44</option>
+<option>45</option>
+<option>46</option>
+<option>47</option>
+<option>48</option>
+<option>49</option>
+<option>50</option>
+<option>51</option>
+<option>52</option>
+<option>53</option>
+<option>54</option>
+<option>55</option>
+<option>56</option>
+<option>57</option>
+<option>58</option>
+<option>59</option>
+</select>
+                    <select id="EndDate_AmPm" name="EndDate.AmPm"><option>AM</option>
+<option>PM</option>
+</select>
+                    <span>(Eastern Standard Time)</span>
+                    <br />
+                </div>
+            </div>
+</form>    </div>
+</div>
+<script type="text/javascript">
+    $(function() {
+        $(".dp").datepicker();
+    });
+</script>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,815 @@
+
+<div class="row expanded extensionDetail hidden slideDown">
+    <div>
+        <div class="ajaxUpdate ajaxUpdateDestinationNumberList row">
+
+
+
+<div class="row">
+    <h4>Where should we forward callers to?</h4>
+    <p class="infotext">Add and configure call forwarding numbers</p>
+</div>
+<ul class="row sortable">
+
+            <li class="destinationNumber">
+                <div class="row summary">
+                    <div class="order">1 </div>
+                    <div class="dragwrap">
+                        <div class="col transouter">
+                            <div class="transinner">
+                                <span class="draghandle"></span>
+                                <div class="left">
+                                    <div class="phone-number">(917) 331-0053</div>
+                                    <div class="middle-text">
+                                        <span class="call-handling-type">Announced</span>
+                                        <span class="separator">|</span>
+                                        <span class="schedule-type">24/7</span>
+                                    </div>
+                                    <div class="clearfix description" style="word-wrap: break-word"></div>
+                                </div>
+<form action="/DestinationNumber/ToggleForwarding" class="ToggleDestinationNumberForm jsonForm left" method="post">                                        <div class="hidden">
+                                            <input data-val="true" data-val-required="The Extension I D field is required." id="ExtensionID" name="ExtensionID" type="hidden" value="635c5ea5-5274-4907-a75e-24aeca1e79ab" />
+                                            <input id="DestinationNumberID" name="DestinationNumberID" type="hidden" value="d354ff8a-134e-4654-a319-a5925c829474" />
+                                        </div>
+                                        <p class="field switch">
+                                            <label class="cb-enable"><span> On </span></label>
+                                            <label class="cb-disable"><span> Off </span></label>
+                                            <input type="checkbox" name="IsOn" checked=&quot;checked&quot; />
+                                        </p>
+</form>                            </div>
+                        </div>
+                        <div class="col right">
+<form action="/DestinationNumber/Prioritize" class="hidden orderChangedTarget" method="post">                                <div class="hidden">
+                                    <input data-val="true" data-val-required="The Extension I D field is required." id="ExtensionID" name="ExtensionID" type="hidden" value="635c5ea5-5274-4907-a75e-24aeca1e79ab" />
+                                    <input id="ExtensionID" name="ExtensionID" type="hidden" value="635c5ea5-5274-4907-a75e-24aeca1e79ab" />
+                                    <input id="DestinationNumberID" name="DestinationNumberID" type="hidden" value="d354ff8a-134e-4654-a319-a5925c829474" />
+                                    <input id="NewIndex" name="NewIndex" type="hidden" value="0" />
+                                </div>
+</form>                            <form action="/DestinationNumber/Delete" method="post">                                <div class="hidden">
+                                    <input id="DestinationNumberID" name="DestinationNumberID" type="hidden" value="d354ff8a-134e-4654-a319-a5925c829474" />
+                                    <input data-val="true" data-val-required="The Extension I D field is required." id="ExtensionID" name="ExtensionID" type="hidden" value="635c5ea5-5274-4907-a75e-24aeca1e79ab" />
+                                </div>
+                                <div>
+                                    <a class="action primary small saveAndCloseDestinationNumber hidden">Save &amp; Close</a>
+                                    <a href="javascript:void(0);" class="action secondary small deleteDestinationNumber formSubmit">Delete</a>
+                                    <a class="action primary small editDestinationNumber">Edit</a>
+                                </div>
+</form>                        </div>
+                    </div>
+                </div>
+                <div class="row details">
+
+<form action="/DestinationNumber/Edit" class="updateDestinationNumber destination-numbers" method="post">    <div class="hidden">
+        <input data-val="true" data-val-required="The Extension I D field is required." id="ExtensionID" name="ExtensionID" type="hidden" value="635c5ea5-5274-4907-a75e-24aeca1e79ab" />
+        <input data-val="true" data-val-required="The Destination Number I D field is required." id="DestinationNumberID" name="DestinationNumberID" type="hidden" value="d354ff8a-134e-4654-a319-a5925c829474" />
+        <input data-val="true" data-val-required="The Is On field is required." id="IsOn" name="IsOn" type="hidden" value="True" />
+        <input type="hidden" name="ExtensionTimeZoneName" value="Eastern Standard Time" />
+    </div>
+    <div class="destination-number-details">
+        <div class="section clearfix">
+            <div class="col">
+                <label for="PhoneData">Forwarding number</label>
+                <input data-val="true" data-val-required="The Forwarding number field is required." id="destinationPhoneNumberData" name="PhoneData" type="text" value="(917) 331-0053" />
+            </div>
+            <div class="col delay">
+                <label for="ForwardingDelay">Ring for...</label>
+                <input class="seconds" data-val="true" data-val-number="The field Ring for... must be a number." data-val-required="The Ring for... field is required." id="ForwardingDelay" name="ForwardingDelay" type="text" value="40" /> <span>Seconds</span>
+            </div>
+        </div>
+        <div id="forwardingOptionsMsg">
+            <img src="/Content/img/i.png" />
+            <span>Inserting a pause only works with direct connect, so we&#39;ll switch to that setting when you save this change</span>
+        </div>
+        <div class="section row">
+            <label>How should Grasshopper handle calls to this number?</label>
+            <div class="handling-options">
+                        <div class="row">
+                            <input id="CallHandlingType_0_d354ff8a134e4654a319a5925c829474" name="CallHandlingType" value="CallAnnounce" type="radio"  checked=&quot;checked&quot;>
+                            <label for="CallHandlingType_0_d354ff8a134e4654a319a5925c829474" class="callHandlingType">Calls will be announced when you pick up.</label>
+                        </div>
+                        <div class="row">
+                            <input id="CallHandlingType_1_d354ff8a134e4654a319a5925c829474" name="CallHandlingType" value="DirectConnect" type="radio" >
+                            <label for="CallHandlingType_1_d354ff8a134e4654a319a5925c829474" class="callHandlingType">Calls will connect to you as soon as you pick up.</label>
+                        </div>
+                        <div class="row">
+                            <input id="CallHandlingType_2_d354ff8a134e4654a319a5925c829474" name="CallHandlingType" value="CallScreening" type="radio" >
+                            <label for="CallHandlingType_2_d354ff8a134e4654a319a5925c829474" class="callHandlingType">Callers will be asked for their name, then announced to you.</label>
+                        </div>
+
+            </div>
+        </div>
+        <div class="section row">
+            <label for="Description">Description (optional)</label>
+            <input class="description" id="Description" maxlength="50" name="Description" type="text" value="" />
+        </div>
+        <div class="section row">
+            <label>When do you want this number to receive calls?</label>
+            <select data-val="true" data-val-required="The Forwarding number schedule field is required." id="ScheduleType" link="/DestinationNumber/ScheduleChangeType" name="ScheduleType"><option selected="selected" value="AlwaysOpen">24/7</option>
+<option value="MondayToFriday9To5">M-F, 9-5</option>
+<option value="SaturdayToSunday9To5">Sat &amp; Sun, 9-5</option>
+<option value="CustomSchedule">Custom Schedule</option>
+</select>
+        </div>
+        <div class="row customScheduling">
+
+<div class="row section">
+    
+    <div class="row">
+        <table class="calendar">
+            <thead>
+                <tr>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td colspan="7" class="selection">
+                            <div class="slot big-slot">24/7 EST</div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+        </div>
+        <div class="section hidden">
+            <a href="javascript:void(0);" class="action primary formSubmit">Update</a>
+        </div>
+    </div>
+</form>
+                </div>
+            </li>
+
+</ul>
+
+
+<div id="AddDestinationNumberCollapsed" class="row">
+<a class="action secondary overlayTrigger" href="/DestinationNumber/ForwardingConfig?extensionID=635c5ea5-5274-4907-a75e-24aeca1e79ab" id="ForwardOptions" rel="#CallForwardingSelectionOverlay">Options</a>        <div id="CallForwardingSelectionOverlay" style="background-color: #FAFAFA" class="hidden modal largeOverlay">
+            <div class="ajaxUpdate"></div>
+        </div>
+    <a id="DestinationNumberFormExpander" class="action secondary right">Add a forwarding number</a>
+</div>
+
+<div id="AddDestinationNumberExpanded" class="row hidden ajaxUpdate">
+
+<div class="row">
+<form action="/DestinationNumber/Create" class="createDestinationNumber destination-numbers" method="post">        <div class="hidden">
+            <input data-val="true" data-val-required="The Extension I D field is required." id="ExtensionID" name="ExtensionID" type="hidden" value="635c5ea5-5274-4907-a75e-24aeca1e79ab" />
+        </div>
+        <div class="row details destination-number-details">
+            <div class="section">
+                <h5>Add a call forwarding number</h5>
+            </div>
+            <div class="section">
+                <label for="PhoneData">Forwarding number</label>
+                <input data-val="true" data-val-required="The Forwarding number field is required." id="destinationPhoneNumberData" name="PhoneData" type="text" value="" />
+            </div>
+            <div id="forwardingOptionsMsg">
+                <img src="/Content/img/i.png"/>
+                <span>Inserting a pause only works with direct connect, so we&#39;ll switch to that setting when you save this change</span>
+            </div>
+            <div class="section">
+                <label>How should Grasshopper handle calls to this number?</label>
+                <div class="handling-options">
+                            <div class="row">
+                                <input id="CallHandlingType_0_635c5ea552744907a75e24aeca1e79ab" name="CallHandlingType" value="CallAnnounce" type="radio" >
+                                <label for="CallHandlingType_0_635c5ea552744907a75e24aeca1e79ab" class="callHandlingType">Calls will be announced when you pick up.</label>
+                            </div>
+                            <div class="row">
+                                <input id="CallHandlingType_0_635c5ea552744907a75e24aeca1e79ab" name="CallHandlingType" value="DirectConnect" type="radio"  checked=&quot;checked&quot;>
+                                <label for="CallHandlingType_0_635c5ea552744907a75e24aeca1e79ab" class="callHandlingType">Calls will connect to you as soon as you pick up.</label>
+                            </div>
+                            <div class="row">
+                                <input id="CallHandlingType_0_635c5ea552744907a75e24aeca1e79ab" name="CallHandlingType" value="CallScreening" type="radio" >
+                                <label for="CallHandlingType_0_635c5ea552744907a75e24aeca1e79ab" class="callHandlingType">Callers will be asked for their name, then announced to you.</label>
+                            </div>
+
+                </div>
+            </div>
+            <div class="section">
+                <label for="Description">Description (optional)</label>
+                <input id="Description" maxlength="50" name="Description" type="text" value="" />
+            </div>
+            <div class="section">
+                <label>When do you want this number to receive calls?</label>
+                <select data-val="true" data-val-required="The Schedule Type field is required." id="ScheduleType" link="/DestinationNumber/ScheduleChangeType" name="ScheduleType"><option selected="selected" value="AlwaysOpen">24/7</option>
+<option value="MondayToFriday9To5">M-F, 9-5</option>
+<option value="SaturdayToSunday9To5">Sat &amp; Sun, 9-5</option>
+<option value="CustomSchedule">Custom Schedule</option>
+</select>
+            </div>
+            <div class="section customScheduling">
+
+<div class="row section">
+    
+    <div class="row">
+        <table class="calendar">
+            <thead>
+                <tr>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td colspan="7" class="selection">
+                            <div class="slot big-slot">24/7 EST</div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+            </div>
+            <div class="section buttons">
+                <a id="DestinationNumberFormCollapser" class="action secondary">Cancel</a>
+                <a href="javascript:void(0);" class="action primary formSubmit">Add this number</a>
+            </div>
+        </div>
+</form></div>
+
+</div>
+<br style="clear:both;" />
+<br style="clear:both;" />
+<hr />
+
+<script type="text/javascript">
+    window.checkFancySwitchesState();
+</script>
+
+        </div>
+        <div class="ajaxUpdate row">
+
+<div class="row">
+<h4>Where do you want messages sent to?</h4>
+<p class="infotext">Messages will be sent as attachments</p>
+</div>
+<ul class="graylist nodrag row">
+        <li class="NotificationRow">
+            <div class="row summary">
+                <div class="left notification-type"> 
+                    <img src="/Content/img/ic_email_message.png" alt="Email" title="Email" style="padding-top:2px;"/>
+                                </div>
+                <span class="left notificationtarget">alexkalman@mac.com</span>
+                <div class="right">
+<form action="/Notification/Delete" class="DeleteNotificationForm jsonForm" method="post">                        <div class="hidden">
+                            <input id="NotificationID" name="NotificationID" type="hidden" value="a2c11ecf-d500-42f9-a730-e3b9ecfcd7e4" />
+                            <input data-val="true" data-val-required="The Extension I D field is required." id="ExtensionID" name="ExtensionID" type="hidden" value="635c5ea5-5274-4907-a75e-24aeca1e79ab" />
+                        </div>
+                        <div>
+                            <a href="javascript:void(0);" id="deleteEmail" class="action secondary small jsonFormSubmit">Delete</a>
+                            <a class="action primary small editNotification">Edit</a>
+                        </div>
+</form>                </div>
+            </div>
+            <div class="row details hidden">
+<form action="/Notification/Edit" class="updateNotification" method="post">    <div class="hidden">
+        <input data-val="true" data-val-required="The Extension I D field is required." id="ExtensionID" name="ExtensionID" type="hidden" value="635c5ea5-5274-4907-a75e-24aeca1e79ab" />
+        <input data-val="true" data-val-required="The Notification I D field is required." id="NotificationID" name="NotificationID" type="hidden" value="a2c11ecf-d500-42f9-a730-e3b9ecfcd7e4" />
+        <input data-val="true" data-val-required="The Notification Type field is required." id="NotificationType" name="NotificationType" type="hidden" value="Email" />
+    </div>
+    <div class="section row">
+        <input data-val="true" data-val-required="The Notification Target field is required." id="NotificationTarget" name="NotificationTarget" type="text" value="alexkalman@mac.com" />
+        <div class="right">
+            <a href="javascript:void(0);" class="action primary small jsonFormSubmit">Save</a> 
+            <a class="action secondary small NotificationUpdateCollapser">Cancel</a>
+        </div>
+    </div>
+</form>
+            </div>
+        </li>
+</ul>
+
+<div class="row section AddNotificationCollapsed">
+<a class="action secondary overlayTrigger" href="/Notification/ForwardExtension?extensionID=635c5ea5-5274-4907-a75e-24aeca1e79ab" rel="#FwdMessageToExtensionOverlay">Options</a>    <a class="action secondary right NotificationFormExpander">Add email address</a>
+</div>
+<div class="row section hidden AddNotificationExpanded">
+<form action="/Notification/Create" class="createNotification" method="post">    <div class="hidden"><input data-val="true" data-val-required="The Extension I D field is required." id="ExtensionID" name="ExtensionID" type="hidden" value="635c5ea5-5274-4907-a75e-24aeca1e79ab" /></div>
+    <div class="row grayrow add-notification">
+        <div class="section">
+            <h5>Add a notification</h5>
+        </div>
+        <div class="section">
+            <label for="EmailAddress">Email Address</label>
+            <input data-val="true" data-val-required="The Email Address field is required." id="EmailAddress" name="EmailAddress" type="text" value="" />
+            <div class="right">
+                <a href="javascript:void(0);" class="action primary formSubmit">Add</a>
+                <a class="action secondary NotificationFormCollapser">Cancel</a>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+
+<div id="FwdMessageToExtensionOverlay" style="background-color: #FAFAFA" class="hidden modal forwardMessageOverlay">
+    <div class="ajaxUpdate"></div>
+</div>
+
+
+        </div>
+        <hr/>
+        <div class="row">
+
+<div class="row collapsed greetings-title">
+    <h4>Greetings</h4>
+    <span hidden id="greetingExtnid">635c5ea5-5274-4907-a75e-24aeca1e79ab</span>
+    <a data-toggle=".otherGreetings" href="javascript:void(0);" class="toggleOtherGreetings action secondary" data-trigger-text="Hide other greetings">Show other greetings</a>
+    <br />
+</div>
+
+<div class="row section greeting-lib">
+    <h5>Voicemail Greeting</h5>
+    <p class="infotext">Gives callers a chance to leave you a message when you are unavailable.</p>
+
+    <div class="ajaxUpdate ajaxUpdateStandardLibrary">
+
+
+
+
+<div class="activegreeting clearfix label-row">
+    <p class="left">
+        System Default
+    </p>
+    <div class="right">
+        <a href="javascript:void(0);" class="action primary right greeting-lib-toggle">Change Greeting</a>
+
+
+<div class="jp-single-player">
+    <div class="jp-interface">
+        <ul class="jp-controls">
+            <li><a href="#" id="jplayer_play_Jplayerb9c12bc4-131e-44f6-81bc-60a1c980b9ff" class="jp-play jp-control" tabindex="1"><span class="jp-playericon">Listen</span></a></li>
+            <li><a href="#" id="jplayer_pause_Jplayerb9c12bc4-131e-44f6-81bc-60a1c980b9ff" class="jp-pause jp-control" tabindex="1"><span class="jp-playericon">Pause</span></a></li>
+            <li><a href="#" id="jplayer_volume_min_Jplayerb9c12bc4-131e-44f6-81bc-60a1c980b9ff" class="jp-volume-min" tabindex="1">min volume</a></li>
+            <li><a href="#" id="jplayer_volume_max_Jplayerb9c12bc4-131e-44f6-81bc-60a1c980b9ff" class="jp-volume-max" tabindex="1">max volume</a></li>
+        </ul>
+        <div id="jplayer_volume_bar_Jplayerb9c12bc4-131e-44f6-81bc-60a1c980b9ff" class="jp-volume-bar"><div id="jplayer_volume_bar_value_Jplayerb9c12bc4-131e-44f6-81bc-60a1c980b9ff" class="jp-volume-bar-value"></div></div>
+        <div id="jplayer_play_time_Jplayerb9c12bc4-131e-44f6-81bc-60a1c980b9ff" class="jp-play-time"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.registerAudioPlayer('/File/PlayDefaultVoiceMail', 'b9c12bc4-131e-44f6-81bc-60a1c980b9ff');
+</script>    </div>
+</div>
+<div class="row section hidden greeting-lib-items">
+
+
+
+    <div class="row section">
+        <a class="action primary right overlayTrigger" href="/Greetings/Create?extensionID=635c5ea5-5274-4907-a75e-24aeca1e79ab&amp;greetingType=Standard&amp;extensionType=Employee" id="CreateNewStandard635c5ea5-5274-4907-a75e-24aeca1e79abGreeting" rel="#RecordingSelectionOverlay_Standard635c5ea5-5274-4907-a75e-24aeca1e79ab">Create new greeting</a>
+        <div id="RecordingSelectionOverlay_Standard635c5ea5-5274-4907-a75e-24aeca1e79ab" style="background-color:#FAFAFA" class="hidden modal mediumOverlay recordingSelectionOverlay">
+            <div class="ajaxUpdate"></div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    pendo.identify({
+        visitor: {
+            gh_customized_main_greeting: 'False',
+            gh_customized_away_greeting: 'False',
+            gh_customised_voicemail_greeting: 'False'
+    }
+});
+</script>
+    </div>
+</div>
+
+<div class="otherGreetings hidden">
+    <div class="row section greeting-lib">
+        <h5>Call Forwarding Greeting</h5>
+        <p class="infotext">Plays right before the call is connected.</p>
+        <div class="row ajaxUpdate ajaxUpdateTransferLibrary">
+
+
+
+
+<div class="activegreeting clearfix label-row">
+    <p class="left">
+        System Default
+    </p>
+    <div class="right">
+        <a href="javascript:void(0);" class="action primary right greeting-lib-toggle">Change Greeting</a>
+
+
+<div class="jp-single-player">
+    <div class="jp-interface">
+        <ul class="jp-controls">
+            <li><a href="#" id="jplayer_play_Jplayer35a40bcf-eb37-404f-b698-f5d4a387eb1a" class="jp-play jp-control" tabindex="1"><span class="jp-playericon">Listen</span></a></li>
+            <li><a href="#" id="jplayer_pause_Jplayer35a40bcf-eb37-404f-b698-f5d4a387eb1a" class="jp-pause jp-control" tabindex="1"><span class="jp-playericon">Pause</span></a></li>
+            <li><a href="#" id="jplayer_volume_min_Jplayer35a40bcf-eb37-404f-b698-f5d4a387eb1a" class="jp-volume-min" tabindex="1">min volume</a></li>
+            <li><a href="#" id="jplayer_volume_max_Jplayer35a40bcf-eb37-404f-b698-f5d4a387eb1a" class="jp-volume-max" tabindex="1">max volume</a></li>
+        </ul>
+        <div id="jplayer_volume_bar_Jplayer35a40bcf-eb37-404f-b698-f5d4a387eb1a" class="jp-volume-bar"><div id="jplayer_volume_bar_value_Jplayer35a40bcf-eb37-404f-b698-f5d4a387eb1a" class="jp-volume-bar-value"></div></div>
+        <div id="jplayer_play_time_Jplayer35a40bcf-eb37-404f-b698-f5d4a387eb1a" class="jp-play-time"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.registerAudioPlayer('/File/PlayDefaultVoiceMail', '35a40bcf-eb37-404f-b698-f5d4a387eb1a');
+</script>    </div>
+</div>
+<div class="row section hidden greeting-lib-items">
+
+
+
+    <div class="row section">
+        <a class="action primary right overlayTrigger" href="/Greetings/Create?extensionID=635c5ea5-5274-4907-a75e-24aeca1e79ab&amp;greetingType=Transfer&amp;extensionType=Employee" id="CreateNewTransfer635c5ea5-5274-4907-a75e-24aeca1e79abGreeting" rel="#RecordingSelectionOverlay_Transfer635c5ea5-5274-4907-a75e-24aeca1e79ab">Create new greeting</a>
+        <div id="RecordingSelectionOverlay_Transfer635c5ea5-5274-4907-a75e-24aeca1e79ab" style="background-color:#FAFAFA" class="hidden modal mediumOverlay recordingSelectionOverlay">
+            <div class="ajaxUpdate"></div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    pendo.identify({
+        visitor: {
+            gh_customized_main_greeting: 'False',
+            gh_customized_away_greeting: 'False',
+            gh_customised_voicemail_greeting: 'False'
+    }
+});
+</script>
+        </div>
+    </div>
+
+    <div class="row section greeting-lib">
+        <h5>Recorded Extension Name</h5>
+        <p class="infotext">Record your extension name, to know which extension an inbound call is for.</p>
+        <div class="row ajaxUpdate ajaxUpdateExtensionNameLibrary">
+
+
+
+
+<div class="activegreeting clearfix label-row">
+    <p class="left">
+        System Default
+    </p>
+    <div class="right">
+        <a href="javascript:void(0);" class="action primary right greeting-lib-toggle">Change Greeting</a>
+
+
+<div class="jp-single-player">
+    <div class="jp-interface">
+        <ul class="jp-controls">
+            <li><a href="#" id="jplayer_play_Jplayer6ba4b27a-2442-4fc4-94e9-f4859994e472" class="jp-play jp-control" tabindex="1"><span class="jp-playericon">Listen</span></a></li>
+            <li><a href="#" id="jplayer_pause_Jplayer6ba4b27a-2442-4fc4-94e9-f4859994e472" class="jp-pause jp-control" tabindex="1"><span class="jp-playericon">Pause</span></a></li>
+            <li><a href="#" id="jplayer_volume_min_Jplayer6ba4b27a-2442-4fc4-94e9-f4859994e472" class="jp-volume-min" tabindex="1">min volume</a></li>
+            <li><a href="#" id="jplayer_volume_max_Jplayer6ba4b27a-2442-4fc4-94e9-f4859994e472" class="jp-volume-max" tabindex="1">max volume</a></li>
+        </ul>
+        <div id="jplayer_volume_bar_Jplayer6ba4b27a-2442-4fc4-94e9-f4859994e472" class="jp-volume-bar"><div id="jplayer_volume_bar_value_Jplayer6ba4b27a-2442-4fc4-94e9-f4859994e472" class="jp-volume-bar-value"></div></div>
+        <div id="jplayer_play_time_Jplayer6ba4b27a-2442-4fc4-94e9-f4859994e472" class="jp-play-time"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.registerAudioPlayer('/File/PlayDefaultVoiceMail', '6ba4b27a-2442-4fc4-94e9-f4859994e472');
+</script>    </div>
+</div>
+<div class="row section hidden greeting-lib-items">
+
+
+
+    <div class="row section">
+        <a class="action primary right overlayTrigger" href="/Greetings/Create?extensionID=635c5ea5-5274-4907-a75e-24aeca1e79ab&amp;greetingType=ExtensionName&amp;extensionType=Employee" id="CreateNewExtensionName635c5ea5-5274-4907-a75e-24aeca1e79abGreeting" rel="#RecordingSelectionOverlay_ExtensionName635c5ea5-5274-4907-a75e-24aeca1e79ab">Create new greeting</a>
+        <div id="RecordingSelectionOverlay_ExtensionName635c5ea5-5274-4907-a75e-24aeca1e79ab" style="background-color:#FAFAFA" class="hidden modal mediumOverlay recordingSelectionOverlay">
+            <div class="ajaxUpdate"></div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    pendo.identify({
+        visitor: {
+            gh_customized_main_greeting: 'False',
+            gh_customized_away_greeting: 'False',
+            gh_customised_voicemail_greeting: 'False'
+    }
+});
+</script>
+        </div>
+    </div>
+
+    <div class="section greeting-lib">
+        <h5>Away Greeting</h5>
+        <p class="infotext">The away greeting will play when we are closed or on vacation</p>
+        <div class="awayGreetinContent opener closed">                        
+            <div class="row section expanded">
+                <div class="away-greeting-lib ajaxUpdate ajaxUpdateAwayLibrary">
+
+<div class="row collapsed activegreeting greeting-header">
+    <div class="row top">
+        <div class="left">
+            <h5 class="greetingsHeader">Away Greeting</h5>
+            <p class="greetingInfoText infotext">Can be used for vacations or when closed. Callers can leave a message for away greetings.</p>
+            <p>
+                System Default (<span>1</span> available)
+            </p>
+        </div>
+        <div class="right">
+                            <span hidden class="greetingExtnid">635c5ea5-5274-4907-a75e-24aeca1e79ab</span>
+                <a id="cg_635c5ea5-5274-4907-a75e-24aeca1e79ab" href="javascript:void(0);" class="expander-trigger state-default action primary right">Change Greeting</a>
+                <a id="cgc_635c5ea5-5274-4907-a75e-24aeca1e79ab" href="javascript:void(0);" class="expander-trigger state-opened action secondary right hidden">Cancel</a>
+
+
+
+<div class="jp-single-player">
+    <div class="jp-interface">
+        <ul class="jp-controls">
+            <li><a href="#" id="jplayer_play_Jplayer911b3b95-669b-4290-899d-f71d17d45f0b" class="jp-play jp-control" tabindex="1"><span class="jp-playericon">Listen</span></a></li>
+            <li><a href="#" id="jplayer_pause_Jplayer911b3b95-669b-4290-899d-f71d17d45f0b" class="jp-pause jp-control" tabindex="1"><span class="jp-playericon">Pause</span></a></li>
+            <li><a href="#" id="jplayer_volume_min_Jplayer911b3b95-669b-4290-899d-f71d17d45f0b" class="jp-volume-min" tabindex="1">min volume</a></li>
+            <li><a href="#" id="jplayer_volume_max_Jplayer911b3b95-669b-4290-899d-f71d17d45f0b" class="jp-volume-max" tabindex="1">max volume</a></li>
+        </ul>
+        <div id="jplayer_volume_bar_Jplayer911b3b95-669b-4290-899d-f71d17d45f0b" class="jp-volume-bar"><div id="jplayer_volume_bar_value_Jplayer911b3b95-669b-4290-899d-f71d17d45f0b" class="jp-volume-bar-value"></div></div>
+        <div id="jplayer_play_time_Jplayer911b3b95-669b-4290-899d-f71d17d45f0b" class="jp-play-time"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.registerAudioPlayer('/File/PlayDefaultVoiceMail', '911b3b95-669b-4290-899d-f71d17d45f0b');
+</script>        </div>
+    </div>
+</div>
+<div id ="cg_expander_635c5ea5-5274-4907-a75e-24aeca1e79ab" class="opener-expander">
+    <div class="row expanded">
+        
+
+
+        <div class="row section">
+            <a class="action primary right overlayTrigger" href="/Greetings/Create?extensionID=635c5ea5-5274-4907-a75e-24aeca1e79ab&amp;greetingType=Away&amp;extensionType=Employee" rel="#AwayGreetingOverlay">Create new away greeting</a>
+
+            <div id="AwayGreetingOverlay" style="background-color: #FAFAFA" class="hidden modal mediumOverlay recordingSelectionOverlay">
+                <div class="ajaxUpdate"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+                </div>
+                <hr />
+                <div class="away-greeting-options ajaxUpdate">
+
+<div class="section">
+    <h5>Options</h5>
+</div>
+<div class="row section">
+    <span class="left option-title">The away greeting will</span>
+<form action="/AwayGreeting/ScheduleMode" class="htmlForm" method="post"><input data-val="true" data-val-required="The Greeting Schedule I D field is required." id="GreetingScheduleID" name="GreetingScheduleID" type="hidden" value="60a08271-d10b-4eb6-88b9-ac6e25a7f2a0" /><input data-val="true" data-val-required="The Extension I D field is required." id="ExtensionID" name="ExtensionID" type="hidden" value="635c5ea5-5274-4907-a75e-24aeca1e79ab" /><input data-val="true" data-val-required="The Schedule Type field is required." id="ScheduleType" name="ScheduleType" type="hidden" value="AlwaysOpen" /><input id="ExtensionTimeZoneName" name="ExtensionTimeZoneName" type="hidden" value="Eastern Standard Time" /><select class="change-schedule left" data-val="true" data-val-required="The Active Schedule Mode field is required." id="ActiveScheduleMode" name="ActiveScheduleMode"><option selected="selected" value="NeverPlay">Never play</option>
+<option value="AlwaysPlay">Play all the time</option>
+<option value="UseScheduleAndVacation">Play when we are closed or on vacation</option>
+</select></form>
+        <div class="clearfix save-reset">
+<form action="/AwayGreeting/Reset" method="post"><input data-val="true" data-val-required="The Extension I D field is required." id="ExtensionID" name="ExtensionID" type="hidden" value="635c5ea5-5274-4907-a75e-24aeca1e79ab" />                <a class="action secondary formSubmit">Cancel</a>
+</form>
+<form action="/AwayGreeting/Save" method="post"><input data-val="true" data-val-required="The Greeting Schedule I D field is required." id="GreetingScheduleID" name="GreetingScheduleID" type="hidden" value="60a08271-d10b-4eb6-88b9-ac6e25a7f2a0" /><input data-val="true" data-val-required="The Extension I D field is required." id="ExtensionID" name="ExtensionID" type="hidden" value="635c5ea5-5274-4907-a75e-24aeca1e79ab" /><input data-val="true" data-val-required="The Active Schedule Mode field is required." id="ActiveScheduleMode" name="ActiveScheduleMode" type="hidden" value="NeverPlay" /><input data-val="true" data-val-required="The Schedule Type field is required." id="ScheduleType" name="ScheduleType" type="hidden" value="AlwaysOpen" /><input id="ExtensionTimeZoneName" name="ExtensionTimeZoneName" type="hidden" value="Eastern Standard Time" />                <a class="action primary formSubmit">Save Options</a>
+</form>        </div>
+</div>
+
+<script type="text/javascript">
+    window.AwayGreetingOptions = {
+        saveAction: "/AwayGreeting/Save",
+        resetAction: "/AwayGreeting/Reset",
+        addAction: "/AwayGreeting/AddTimeSlot"
+    };
+
+    $(function() {
+        var done = false;;
+        if (done) {
+            $("#exposeMask").hide();
+        }
+    });
+</script>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="ajaxUpdate vacation-schedule">
+<div class="row">
+    <div class="clearfix">
+        <div class="left">
+            <h5>Vacation Schedule</h5>
+            <p class="infotext">
+                Vacation not scheduled
+            </p>
+        </div>
+        <div class="right">
+<form action="/VacationDays/RemoveVacation" method="post"><input data-val="true" data-val-required="The Extension Id field is required." id="ExtensionId" name="ExtensionId" type="hidden" value="635c5ea5-5274-4907-a75e-24aeca1e79ab" /><input data-val="true" data-val-required="The Active Schedule Mode field is required." id="ActiveScheduleMode" name="ActiveScheduleMode" type="hidden" value="NeverPlay" />                    <a id ="tvg_635c5ea5-5274-4907-a75e-24aeca1e79ab" href="javascript:void(0)" class="action primary toggleVacationGreeting">Add Vacation</a>
+</form>        </div>
+    </div>
+</div>
+<div class="hidden" id="vacationDaysExpanded_635c5ea5-5274-4907-a75e-24aeca1e79ab">
+    <div class="row section activegreeting">
+<form action="/VacationDays/SetVacationSchedule" method="post"><input data-val="true" data-val-required="The Extension Id field is required." id="ExtensionId" name="ExtensionId" type="hidden" value="635c5ea5-5274-4907-a75e-24aeca1e79ab" /><input data-val="true" data-val-required="The Active Schedule Mode field is required." id="ActiveScheduleMode" name="ActiveScheduleMode" type="hidden" value="NeverPlay" /><input id="VacationScheduleID" name="VacationScheduleID" type="hidden" value="" />            <div class="row section">
+                <div class="left">
+                    <h5 class="OnVacationLabel">On vacation...</h5>
+                </div>
+                <span class="right">
+                    <a id ="vdeCancel_635c5ea5-5274-4907-a75e-24aeca1e79ab" class="action secondary cancelVacationGreeting" href="javascript:void(0);">Cancel</a>
+                    <a class="action primary formSubmit" href="javascript:void(0);">Save</a>
+                </span>
+            </div>
+            <div class="vacation-dates">
+                <div class="row section">
+                    <label>From</label>
+                    <span class="data-input">
+                        <input class="dp" id="vacationFrom_635c5ea5-5274-4907-a75e-24aeca1e79ab" name="StartDate.DateString" type="text" value="" />
+                        <label for="vacationFrom" style="display:inline;"><i class="icon-calendar"></i></label>
+                    </span>
+                    <select id="StartDate_Hours" name="StartDate.Hours"><option>01</option>
+<option>02</option>
+<option>03</option>
+<option>04</option>
+<option>05</option>
+<option>06</option>
+<option>07</option>
+<option>08</option>
+<option>09</option>
+<option>10</option>
+<option>11</option>
+<option selected="selected">12</option>
+</select>
+                    <select id="StartDate_Minutes" name="StartDate.Minutes"><option>00</option>
+<option>01</option>
+<option>02</option>
+<option>03</option>
+<option>04</option>
+<option>05</option>
+<option>06</option>
+<option>07</option>
+<option>08</option>
+<option>09</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+<option>13</option>
+<option>14</option>
+<option>15</option>
+<option>16</option>
+<option>17</option>
+<option>18</option>
+<option>19</option>
+<option>20</option>
+<option>21</option>
+<option>22</option>
+<option>23</option>
+<option>24</option>
+<option>25</option>
+<option>26</option>
+<option>27</option>
+<option>28</option>
+<option>29</option>
+<option>30</option>
+<option>31</option>
+<option>32</option>
+<option>33</option>
+<option>34</option>
+<option>35</option>
+<option>36</option>
+<option>37</option>
+<option>38</option>
+<option>39</option>
+<option>40</option>
+<option>41</option>
+<option>42</option>
+<option>43</option>
+<option>44</option>
+<option>45</option>
+<option>46</option>
+<option>47</option>
+<option>48</option>
+<option>49</option>
+<option>50</option>
+<option>51</option>
+<option>52</option>
+<option>53</option>
+<option>54</option>
+<option>55</option>
+<option>56</option>
+<option>57</option>
+<option>58</option>
+<option>59</option>
+</select>
+                    <select id="StartDate_AmPm" name="StartDate.AmPm"><option>AM</option>
+<option>PM</option>
+</select>
+                    <span>(Eastern Standard Time)</span>
+                    <br />
+                </div>
+                <div class="row section">
+                    <label>To</label>
+                    <span class="data-input">
+                        <input class="dp" id="vacationTo_635c5ea5-5274-4907-a75e-24aeca1e79ab" name="EndDate.DateString" type="text" value="" />
+                        <label for="vacationTo" style="display:inline;"><i class="icon-calendar"></i></label>
+                    </span>
+                    <select id="EndDate_Hours" name="EndDate.Hours"><option>01</option>
+<option>02</option>
+<option>03</option>
+<option>04</option>
+<option>05</option>
+<option>06</option>
+<option>07</option>
+<option>08</option>
+<option>09</option>
+<option>10</option>
+<option>11</option>
+<option selected="selected">12</option>
+</select>
+                    <select id="EndDate_Minutes" name="EndDate.Minutes"><option>00</option>
+<option>01</option>
+<option>02</option>
+<option>03</option>
+<option>04</option>
+<option>05</option>
+<option>06</option>
+<option>07</option>
+<option>08</option>
+<option>09</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+<option>13</option>
+<option>14</option>
+<option>15</option>
+<option>16</option>
+<option>17</option>
+<option>18</option>
+<option>19</option>
+<option>20</option>
+<option>21</option>
+<option>22</option>
+<option>23</option>
+<option>24</option>
+<option>25</option>
+<option>26</option>
+<option>27</option>
+<option>28</option>
+<option>29</option>
+<option>30</option>
+<option>31</option>
+<option>32</option>
+<option>33</option>
+<option>34</option>
+<option>35</option>
+<option>36</option>
+<option>37</option>
+<option>38</option>
+<option>39</option>
+<option>40</option>
+<option>41</option>
+<option>42</option>
+<option>43</option>
+<option>44</option>
+<option>45</option>
+<option>46</option>
+<option>47</option>
+<option>48</option>
+<option>49</option>
+<option>50</option>
+<option>51</option>
+<option>52</option>
+<option>53</option>
+<option>54</option>
+<option>55</option>
+<option>56</option>
+<option>57</option>
+<option>58</option>
+<option>59</option>
+</select>
+                    <select id="EndDate_AmPm" name="EndDate.AmPm"><option>AM</option>
+<option>PM</option>
+</select>
+                    <span>(Eastern Standard Time)</span>
+                    <br />
+                </div>
+            </div>
+</form>    </div>
+</div>
+<script type="text/javascript">
+    $(function() {
+        $(".dp").datepicker();
+    });
+</script>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</div>
