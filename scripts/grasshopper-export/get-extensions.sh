@@ -11,5 +11,5 @@ mkdir -p greetings_mp3
 
 # Step 1: Download HTML pages listed in extensionurls.txt
 while IFS= read -r url; do
-    wget --header="Cookie: __RequestVerificationToken=***REMOVED***; .GRASSHOPPERAUTH=***REMOVED***;" -P downloaded_html "$url"
+    wget --header="Cookie: __RequestVerificationToken=[[[COOKIE]]]; .GRASSHOPPERAUTH=[[[COOKIE]]];" -P downloaded_html "$url"
 done < extensionurls.txt
