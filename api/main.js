@@ -147,11 +147,13 @@ module.exports = (req, res) => {
 
   if (req.body?.Digits) {
     const digits = req.body.Digits;
+
     if (digits === 777) {
       // easter egg (and for phone verifications)
       twimlResponse.say('Connecting you to human: Jacob Ford')
       twimlResponse.dial('267-421-9885')
     }
+
     if (validExtensions.includes(digits)) {
       // Construct the audio file URL using the provided reference number.
       const audioUrl = `https://audioguide.mmm.museum/2024/${digits}.mp3`;
@@ -161,6 +163,7 @@ module.exports = (req, res) => {
       twimlResponse.say('There is no audio for that reference number. Please try another.');
     }
     twimlResponse.redirect('/api/main');
+
   } else {
     // Initial prompt for the user.
     twimlResponse.gather({
