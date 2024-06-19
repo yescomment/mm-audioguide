@@ -1,0 +1,1 @@
+All downloaded greetings moved to https://drive.google.com/open?id=17hKt0lDC3HTSw8104o3CbuIwLqebKpbA&usp=drive_fs
