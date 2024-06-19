@@ -152,16 +152,20 @@ module.exports = (req, res) => {
       // easter egg (and for phone verifications)
       twimlResponse.say('Connecting you to human: Jacob Ford')
       twimlResponse.dial('267-421-9885')
+      twimlResponse.say('Human contact terminated')
     }
 
-    if (validExtensions.includes(digits)) {
+    else if (validExtensions.includes(digits)) {
       // Construct the audio file URL using the provided reference number.
       const audioUrl = `https://audioguide.mmm.museum/2024/${digits}.mp3`;
       twimlResponse.play(audioUrl);
-    } else {
+    }
+
+    else {
       // If the input is out of range, ask again.
       twimlResponse.say('There is no audio for that reference number. Please try another.');
     }
+
     twimlResponse.redirect('/api/main');
 
   } else {
